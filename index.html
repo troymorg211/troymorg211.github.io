@@ -1,27 +1,74 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Your Name | Cybersecurity Developer</title>  
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
-  <link rel="stylesheet" href="styles.css">  
-</head>  
-<body class="bg-navy text-gray-300">  
-  <!-- Hero Section -->  
-  <section id="hero" class="min-h-screen flex items-center justify-center">  
-    <div class="text-center" data-aos="fade-up">  
-      <h1 class="text-5xl font-bold text-teal mb-4">Your Name</h1>  
-      <p class="text-xl mb-8">Securing the web, one line of code at a time</p>  
-      <a href="#projects" class="bg-teal text-navy px-6 py-3 rounded-lg hover:bg-teal/80">View My Work</a>  
-    </div>  
-  </section>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurence Otaongo | Cybersecurity & Development</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <!-- Add other sections here -->  
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Laurence Otaongo</h1>
+            <p class="subtitle">Cybersecurity Specialist | Full-Stack Developer</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
-  <script>AOS.init();</script>  
-  <script src="script.js"></script>  
-</body>  
-</html>  
+    <!-- About Section -->
+    <section id="about" class="section" data-aos="fade-right">
+        <h2>About Me</h2>
+        <p>A passionate cybersecurity enthusiast and developer with expertise in Python, network security, and ethical hacking...</p>
+        <div class="skills">
+            <span>Python</span>
+            <span>Penetration Testing</span>
+            <span>Flask/Django</span>
+            <span>Cloud Security</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section" data-aos="fade-left">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Network Scanner</h3>
+                <p>Python tool for detecting vulnerabilities in local networks.</p>
+                <a href="#" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Add more project cards -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" data-aos="zoom-in">
+        <h2>Get in Touch</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

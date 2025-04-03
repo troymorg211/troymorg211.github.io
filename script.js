@@ -1,27 +1,37 @@
-const projects = [  
-    {  
-      title: "Network Scanner",  
-      tech: ["Python", "Scapy", "Nmap"],  
-      github: "https://github.com/yourusername/network-scanner",  
-      demo: "#",  
-      description: "Scans local networks for open ports and vulnerabilities."  
-    },  
-    // Add more projects  
-  ];  
-  
-  function renderProjects() {  
-    const grid = document.getElementById("projects-grid");  
-    projects.forEach(project => {  
-      grid.innerHTML += `  
-        <div class="project-card bg-gray-800 p-6 rounded-lg" data-aos="fade-up">  
-          <h3 class="text-teal text-xl mb-2">${project.title}</h3>  
-          <p class="mb-4">${project.description}</p>  
-          <div class="flex gap-2 mb-4">  
-            ${project.tech.map(t => `<span class="bg-teal/20 text-teal px-3 py-1 rounded-full">${t}</span>`).join('')}  
-          </div>  
-          <a href="${project.github}" class="text-teal hover:underline">GitHub →</a>  
-        </div>  
-      `;  
-    });  
-  }  
-  renderProjects();  
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Highlight active section on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
+    
+    sections.forEach(section => {
+        const top = window.scrollY;
+        const offset = section.offsetTop - 100;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(id)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
